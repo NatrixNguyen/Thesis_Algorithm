@@ -1,0 +1,401 @@
+0.000000, 0.000000, 0.000000, 0.000000 
+0.000000, 0.000000, 0.000000, 0.000000 
+0.000000, 0.000000, 0.000000, 0.000000 
+0.000000, 0.000000, 0.000000, 0.000000 
+0.000000, 0.000000, 0.000000, 0.000000 
+0.000000, 0.000000, 0.000000, 0.000000 
+0.000000, 0.000000, 0.000000, 0.000000 
+0.000000, 0.000000, 0.000000, 0.000000 
+0.000000, 0.000000, 0.000000, 0.000000 
+0.000000, 0.000000, 0.000000, 0.000000 
+0.000000, 0.000000, 0.000000, 0.000000 
+0.000000, 0.000000, 0.000000, 0.000000 
+0.000000, 0.000000, 0.000000, 0.000000 
+0.000000, 0.000000, 0.000000, 0.000000 
+0.000000, 0.000000, 0.000000, 0.000000 
+0.000000, 0.000000, 0.000000, 0.000000 
+208.182129,    nan, 215.679916,    nan 
+209.499969,    nan, 215.841812,    nan 
+210.511047,    nan, 215.843048,    nan 
+211.303146,    nan, 215.916107,    nan 
+211.935242,    nan, 215.749878,    nan 
+212.447739,    nan, 215.751434,    nan 
+212.868942,    nan, 215.899170,    nan 
+213.219406,    nan, 215.845551,    nan 
+213.514130,    nan, 215.843048,    nan 
+158.318329,    nan, 215.506027,    nan 
+84.894302,    nan, 215.774536,    nan 
+93.121964,    nan, 215.778030,    nan 
+69.988998,    nan, 215.865891,    nan 
+168.018753,    nan, 215.840576,    nan 
+134.785706,    nan, 215.841812,    nan 
+126.036209,    nan, 215.138733,    nan 
+74.385391,    nan, 215.610992,    nan 
+136.432068,    nan, 215.611496,    nan 
+143.895355,    nan, 215.387634,    nan 
+135.981445,    nan, 215.934418,    nan 
+141.021057,    nan, 215.937469,    nan 
+126.036209,    nan, 215.575882,    nan 
+176.389664,    nan, 215.618607,    nan 
+180.357162,    nan, 215.618607,    nan 
+215.779800,    nan, 215.230316,    nan 
+215.778915,    nan, 215.864441,    nan 
+215.129013,    nan, 215.865891,    nan 
+215.667343,    nan, 215.934418,    nan 
+215.667343,    nan, 215.893509,    nan 
+215.639694,    nan, 215.899170,    nan 
+215.947678,    nan, 215.471985,    nan 
+215.960449,    nan, 215.771957,    nan 
+215.316422,    nan, 215.774536,    nan 
+215.560486,    nan, 215.980225,    nan 
+215.559601,    nan, 215.839355,    nan 
+215.038132,    nan, 215.839355,    nan 
+215.807266,    nan, 215.624283,    nan 
+215.809296,    nan, 215.832214,    nan 
+215.655792,    nan, 215.833374,    nan 
+   nan,    nan, 215.923416,    nan 
+212.550613,    nan, 215.827606,    nan 
+212.536972,    nan, 215.831055,    nan 
+215.704041,    nan, 215.951569,    nan 
+213.035431,    nan, 215.861572,    nan 
+215.106415,    nan, 215.861572,    nan 
+211.968109,    nan, 215.832214,    nan 
+126.036209,    nan, 216.000000,    nan 
+   nan,    nan, 216.000000,    nan 
+   nan,    nan, 180.272095,    nan 
+   nan,    nan, 176.489319,    nan 
+   nan,    nan, 179.688293,    nan 
+   nan,    nan, 141.469193,    nan 
+   nan,    nan, 136.114197,    nan 
+   nan,    nan, 144.028137,    nan 
+   nan,    nan, 136.561722,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan, 64.800674,    nan,    nan 
+   nan, 64.141464,    nan,    nan 
+   nan, 64.141464,    nan,    nan 
+   nan, 64.800705,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan, 214.006317,    nan 
+   nan,    nan, 171.713623,    nan 
+   nan,    nan, 173.707169,    nan 
+   nan,    nan, 209.732483,    nan 
+105.409851,    nan, 209.630325,    nan 
+126.036209,    nan, 76.779892,    nan 
+   nan,    nan, 137.975830,    nan 
+   nan,    nan, 179.660065,    nan 
+   nan,    nan, 141.413361,    nan 
+   nan,    nan, 136.111053,    nan 
+   nan,    nan, 144.024994,    nan 
+   nan,    nan, 136.558655,    nan 
+   nan,    nan, 185.567291,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan, 126.036209,    nan 
+   nan,    nan, 126.036209,    nan 
+   nan,    nan, 126.036209,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan, 56.352402,    nan,    nan 
+   nan, 62.454880,    nan,    nan 
+   nan, 66.438248,    nan,    nan 
+   nan, 62.454895,    nan,    nan 
+   nan, 56.352371,    nan,    nan 
+   nan,    nan, 126.036209,    nan 
+   nan,    nan, 126.036209,    nan 
+   nan,    nan, 126.036209,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan, 126.036209,    nan 
+   nan,    nan, 126.036209,    nan 
+   nan,    nan, 126.036209,    nan 
+   nan,    nan, 126.036209,    nan 
+   nan,    nan, 126.036209,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan, 56.360931,    nan 
+   nan,    nan, 62.454971,    nan 
+   nan,    nan, 66.438248,    nan 
+   nan,    nan, 62.454819,    nan 
+   nan,    nan, 56.343811,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+126.036209,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+126.036209, 64.800674,    nan,    nan 
+126.036209, 64.141464,    nan,    nan 
+126.036209, 64.141464,    nan,    nan 
+   nan, 64.800705,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan, 126.036209,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan, 126.036209,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan, 126.036209,    nan 
+   nan,    nan, 126.036209,    nan 
+   nan,    nan, 126.036209,    nan 
+   nan,    nan, 126.036209,    nan 
+   nan,    nan, 126.036209,    nan 
+   nan,    nan, 126.036209,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan, 126.036209,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan, 126.036209 
+   nan,    nan,    nan, 126.036209 
+   nan,    nan,    nan, 126.036209 
+   nan,    nan,    nan, 126.036209 
+   nan,    nan,    nan, 126.036209 
+   nan,    nan,    nan, 126.036209 
+   nan,    nan,    nan, 69.025238 
+126.036209,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
+   nan,    nan,    nan,    nan 
