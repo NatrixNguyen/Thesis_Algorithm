@@ -9,44 +9,44 @@
 
 
 /*Declaration for input of Voltage*/
-float Pa[200], Pn[200];
-float Ma[200][200], Mn[200][200];
-float Na[200][200], Nn[200][200];
-float Y_paa[200][200], Y_pan[200][200];
-float Y_pra[200][200], Y_prn[200][200];
-float V_paa[200][200], V_pan[200][200];
-float V_pra[200][200], V_prn[200][200];
-float Phi_a, Phi_n;
-float PAS_a[500], PAS_n[500];
-float PAS_amax, PAS_nmax;
-float PAS_amin, PAS_nmin;
-float dot, eucl;
+double Pa[200], Pn[200];
+double Ma[200][200], Mn[200][200];
+double Na[200][200], Nn[200][200];
+double Y_paa[200][200], Y_pan[200][200];
+double Y_pra[200][200], Y_prn[200][200];
+double V_paa[200][200], V_pan[200][200];
+double V_pra[200][200], V_prn[200][200];
+double Phi_a, Phi_n;
+double PAS_a[500], PAS_n[500];
+double PAS_amax, PAS_nmax;
+double PAS_amin, PAS_nmin;
+double dot, eucl;
 
 /*Declaration for input of Current*/
-float Mca[200][200], Mcn[200][200];
-float Nca[200][200], Ncn[200][200];
-float Yc_paa[200][200], Yc_pan[200][200];
-float Yc_pra[200][200], Yc_prn[200][200];
-float Vc_paa[200][200], Vc_pan[200][200];
-float Vc_pra[200][200], Vc_prn[200][200];
-float Phic_a, Phic_n;
-float PASc_a[500], PASc_n[500];
+double Mca[200][200], Mcn[200][200];
+double Nca[200][200], Ncn[200][200];
+double Yc_paa[200][200], Yc_pan[200][200];
+double Yc_pra[200][200], Yc_prn[200][200];
+double Vc_paa[200][200], Vc_pan[200][200];
+double Vc_pra[200][200], Vc_prn[200][200];
+double Phic_a, Phic_n;
+double PASc_a[500], PASc_n[500];
 
 // declare for D parameter
-float cur_a[200], cur_b[200], cur_c[200], cur_n[200];
+double cur_a[200], cur_b[200], cur_c[200], cur_n[200];
 
 // declare for other elementary
-float S1[200][200], S2[200][200];
-float mid1[200][200];
-float mid2[200][200];
-float c1[200][200];
+double S1[200][200], S2[200][200];
+double mid1[200][200];
+double mid2[200][200];
+double c1[200][200];
 
-float f, w, Ts;
+double f, w, Ts;
 
 int i, j, q, cnt, m, k, alpha, sample, count, length;
 
 // Multiply two matrix
-void MatrixMultiply(float a[][200], float b[][200], int row1, int col1, int col2, float c[][200])
+void MatrixMultiply(double a[][200], double b[][200], int row1, int col1, int col2, double c[][200])
 {
 
 	int i, j, q;
@@ -64,10 +64,10 @@ void MatrixMultiply(float a[][200], float b[][200], int row1, int col1, int col2
 }
 
 // Dot product of two vector
-float DotProduct(float a[][200], float b[][200], int k)
+double DotProduct(double a[][200], double b[][200], int k)
 {
 	int i;
-	float c = 0;
+	double c = 0;
 	for (i = 0; i < k; i++)
 	{
 		c += a[i][0] * b[i][0];
@@ -76,12 +76,12 @@ float DotProduct(float a[][200], float b[][200], int k)
 }
 
 // Euclidian length of vector
-float Euclidian(float a[][200], float b[][200], int k)
+double Euclidian(double a[][200], double b[][200], int k)
 {
 	int i;
-	float c = 0;
-	float d = 0;
-	float e = 0;
+	double c = 0;
+	double d = 0;
+	double e = 0;
 	for (i = 0; i < k; i++)
 	{
 		c += pow(a[i][0], 2);
@@ -93,9 +93,9 @@ float Euclidian(float a[][200], float b[][200], int k)
 }
 
 /*For calculating Determinant of the Matrix */
-float determinant(float a[][200], float k)
+double determinant(double a[][200], double k)
 {
-	float s = 1, det = 0, b[200][200];
+	double s = 1, det = 0, b[200][200];
 	int i, j, m, n, c;
 	if (k == 1)
 	{
@@ -134,9 +134,9 @@ float determinant(float a[][200], float k)
 	return (det);
 }
 
-void InvertMatrix(float num[200][200], float f, float inverse[][200])
+void InvertMatrix(double num[200][200], double f, double inverse[][200])
 {
-	float b[200][200], fac[200][200], d;
+	double b[200][200], fac[200][200], d;
 	int p, q, m, n, i, j;
 	for (q = 0; q < f; q++)
 	{
@@ -184,9 +184,9 @@ void InvertMatrix(float num[200][200], float f, float inverse[][200])
 
 // input for trix H
 // Try thissssssssssssssssss................................................
-void inputH(float H1[][200], float H2[][200], float current[200], int m)
+void inputH(double H1[][200], double H2[][200], double current[200], int m)
 {
-	float temp;
+	double temp;
 	for (int j = 0; j < 3; j++)
 	{
 		for (int i = 0; i < m - 4; i++)
@@ -214,22 +214,22 @@ void inputH(float H1[][200], float H2[][200], float current[200], int m)
 
 typedef struct
 {
-	float voltage_a;
-	float voltage_n;
+	double voltage_a;
+	double voltage_n;
 
-	float current_a;
-	float current_n;
+	double current_a;
+	double current_n;
 } Signal;
 
 int main(void)
 {
 
 	clock_t start, end; // Khai báo biến thời gian
-	float time_use;		// Thời gian sử dụng
+	double time_use;		// Thời gian sử dụng
 	start = clock();	// Lấy thời gian trước khi thực hiện thuật toán
 
 	FILE *file1;
-	file1 = fopen("data_test_3.txt", "r");
+	file1 = fopen("data_test.txt", "r");
 
 	if (file1 == NULL)
 	{
@@ -237,26 +237,28 @@ int main(void)
 		return 1;
 	}
 
-	volatile int samplefloat = 201;
+	volatile int sampledouble = 201;
 
 	volatile Signal S[201];
 
 	int read = 0;
 	int records = 0;
+    
 	do
 	{
-		read = fscanf(file1, "%6f %6f %6f %6f",
-					  &S[records].voltage_a,
-					  &S[records].voltage_n,
+		//read = fscanf(file1, "%lf %lf %lf %lf", &S[records].voltage_a, &S[records].voltage_n, &S[records].current_a, &S[records].current_n);
+        for (i = 0; i < 210; i++) {
+            fscanf(file1, "%lf", &S[i].voltage_a);
+            fscanf(file1, "%lf", &S[i].voltage_n);
+            fscanf(file1, "%lf", &S[i].current_a);
+            fscanf(file1, "%lf", &S[i].current_n);
+        }
 
-					  &S[records].current_a,
-					  &S[records].current_n
-		);
-
-		if (read <= samplefloat)
+		printf("\n");
+		if (read <= sampledouble)
 			records++;
 
-		if (read == samplefloat && (!feof(file1)))
+		if (read == sampledouble && (!feof(file1)))
 		{
 			printf("File format incorrect.\n");
 			return 1;
@@ -266,6 +268,7 @@ int main(void)
 			printf("Error reading file.\n");
 			return 1;
 		}
+        
 	} while (feof(file1));
 
 	fclose(file1);
@@ -274,7 +277,7 @@ int main(void)
 
 	for (i = 0; i < 200; i++)
 	{
-		printf("%d %6f %6f %6f %6f ",
+		printf("%d %lf %lf %lf %lf ",
 			   i,
 			   S[i].voltage_a,
 			   S[i].voltage_n,
@@ -285,7 +288,7 @@ int main(void)
 		);
 		printf("\n");
 	}
-
+    
 	// Input frequency of inverter for f
 	f = 50;
 
@@ -453,9 +456,9 @@ int main(void)
 	}
 
     end = clock();									  // lấy thời gian sau khi thực hiện
-	time_use = (float)(end - start) / CLOCKS_PER_SEC; // Tính thời gian sử dụng
+	time_use = (double)(end - start) / CLOCKS_PER_SEC; // Tính thời gian sử dụng
 
-	printf("Time used = %6f\n", time_use);
+	printf("Time used = %lf\n", time_use);
 
 	FILE *fp = NULL;
 
@@ -464,7 +467,7 @@ int main(void)
 	// Ghi dữ liệu theo định dạng chỉ định vào file
 	for (int i = 0; i < 201; i++)
 	{
-		fprintf(fp, "%6f, %6f, %6f, %6f \n",
+		fprintf(fp, "%lf, %lf, %lf, %lf \n",
 				PAS_a[i], PAS_n[i],
 				PASc_a[i], PASc_n[i]);
 	}
