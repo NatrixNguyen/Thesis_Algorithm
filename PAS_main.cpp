@@ -41,6 +41,12 @@ double mid1[200][200];
 double mid2[200][200];
 double c1[200][200];
 
+double determinant(double [][25], double);
+
+void cofactor(double [][25], double);
+
+void transpose(double [][25], double [][25], double);
+
 double f, w, Ts;
 
 int i, j, q, cnt, m, k, alpha, sample, count, length;
@@ -93,6 +99,7 @@ double Euclidian(double a[][200], double b[][200], int k)
 }
 
 /*For calculating Determinant of the Matrix */
+/*
 double determinant(double a[][200], double k)
 {
 	double s = 1, det = 0, b[200][200];
@@ -133,7 +140,8 @@ double determinant(double a[][200], double k)
 
 	return (det);
 }
-
+*/
+/*
 void InvertMatrix(double num[200][200], double f, double inverse[][200])
 {
 	double b[200][200], fac[200][200], d;
@@ -181,7 +189,127 @@ void InvertMatrix(double num[200][200], double f, double inverse[][200])
 		}
 	}
 }
+*/
 
+    void InvertMatrix()
+    {
+      double a[25][25], index, d;
+      int i, j;
+      index = k;
+      for (i = 0;i < index; i++)
+        {
+         for (j = 0;j < index; j++)
+           {
+            a[i][j]= mid1[i][j];
+            }
+        }
+      d = determinant(a, index);
+      if (d == 0)
+       printf("\nInverse of Entered Matrix is not possible\n");
+      else
+       cofactor(a, index);
+    }
+    /*For calculating Determinant of the Matrix */
+    double determinant(double a[25][25], double index)
+    {
+      double s = 1, det = 0, b[25][25];
+      int i, j, m, n, c;
+      if (index == 1)
+        {
+         return (a[0][0]);
+        }
+      else
+        {
+         det = 0;
+         for (c = 0; c < index; c++)
+           {
+            m = 0;
+            n = 0;
+            for (i = 0;i < index; i++)
+              {
+                for (j = 0 ;j < index; j++)
+                  {
+                    b[i][j] = 0;
+                    if (i != 0 && j != c)
+                     {
+                       b[m][n] = a[i][j];
+                       if (n < (index - 2))
+                        n++;
+                       else
+                        {
+                         n = 0;
+                         m++;
+                         }
+                       }
+                   }
+                 }
+              det = det + s * (a[0][c] * determinant(b, index - 1));
+              s = -1 * s;
+              }
+        }
+        return (det);
+    }
+    void cofactor(double num[25][25], double f)
+    {
+     double b[25][25], fac[25][25];
+     int p, q, m, n, i, j;
+     for (q = 0;q < f; q++)
+     {
+       for (p = 0;p < f; p++)
+        {
+         m = 0;
+         n = 0;
+         for (i = 0;i < f; i++)
+         {
+           for (j = 0;j < f; j++)
+            {
+              if (i != q && j != p)
+              {
+                b[m][n] = num[i][j];
+                if (n < (f - 2))
+                 n++;
+                else
+                 {
+                   n = 0;
+                   m++;
+                   }
+                }
+            }
+          }
+          fac[q][p] = pow(-1, q + p) * determinant(b, f - 1);
+        }
+      }
+      transpose(num, fac, f);
+    }
+    /*Finding transpose of matrix*/ 
+    void transpose(double num[25][25], double fac[25][25], double r)
+    {
+      int i, j;
+      double b[25][25], inverse[25][25], d;
+      for (i = 0;i < r; i++)
+        {
+         for (j = 0;j < r; j++)
+           {
+             b[i][j] = fac[j][i];
+            }
+        }
+      d = determinant(num, r);
+      for (i = 0;i < r; i++)
+        {
+         for (j = 0;j < r; j++)
+           {
+            inverse[i][j] = b[i][j] / d;
+            }
+        }
+     
+       for (i = 0;i < r; i++)
+        {
+         for (j = 0;j < r; j++)
+           {
+            mid2[i][j] = inverse[i][j];
+            }
+         }
+    }
 // input for trix H
 // Try thissssssssssssssssss................................................
 void inputH(double H1[][200], double H2[][200], double current[200], int m)
@@ -229,7 +357,7 @@ int main(void)
 	start = clock();	// Lấy thời gian trước khi thực hiện thuật toán
 
 	FILE *file1;
-	file1 = fopen("data_test.txt", "r");
+	file1 = fopen("data_test_2.txt", "r");
 
 	if (file1 == NULL)
 	{
@@ -247,7 +375,7 @@ int main(void)
 	do
 	{
 		//read = fscanf(file1, "%lf %lf %lf %lf", &S[records].voltage_a, &S[records].voltage_n, &S[records].current_a, &S[records].current_n);
-        for (i = 0; i < 210; i++) {
+        for (i = 0; i < 200; i++) {
             fscanf(file1, "%lf", &S[i].voltage_a);
             fscanf(file1, "%lf", &S[i].voltage_n);
             fscanf(file1, "%lf", &S[i].current_a);
@@ -310,27 +438,61 @@ int main(void)
 	count = 0;
 	cnt = 0;
 
-    for (int j = 0; j < 2; j++)
+    for (int i = 0; i < 2; i++)
 	{
-		for (int i = 0; i < k; i++)
+		for (int j = 0; j < k; j++)
 		{
-			if (j == 0)
+			if (i == 0)
 			{
-				S1[i][j] = cos(w * (i + 1) * Ts);
+				S1[i][j] = cos(w * (j + 1) * Ts);
 			}
-			else if (j == 1)
+			else if (i == 1)
 			{
-				S1[i][j] = sin(w * (i + 1) * Ts);
+				S1[i][j] = sin(w * (j + 1) * Ts);
 			}
 			S2[j][i] = S1[i][j];
 		}
     }
+    //fixed --> Wrong in the dimension of matrix S1 and S2
+
+    printf("Matrix S1:\n");
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < k; j++) {
+            printf("%lf ", S1[i][j]);
+        }
+        printf("\n");
+    }
+
+	printf("Matrix S2:\n");
+    for (int i = 0; i < k; i++) {
+        for (int j = 0; j < 2; j++) {
+            printf("%lf ", S2[i][j]);
+        }
+        printf("\n");
+    }
 
     // Compute C1=(S2*S1)^-1*S2
 
-	MatrixMultiply(S2, S1, 2, k, 2, mid1);
+	MatrixMultiply(S2, S1, k, 2, k, mid1);
 
-	InvertMatrix(mid1, 2, mid2);
+    	printf("Matrix mid1:\n");
+        for (int i = 0; i < k; i++) {
+        for (int j = 0; j < k; j++) {
+            printf("%lf ", mid1[i][j]);
+        }
+        printf("\n");
+    	}
+
+	InvertMatrix();
+	//InvertMatrix(mid1, k, mid2);
+
+	printf("Matrix mid2:\n");
+        for (int i = 0; i < k; i++) {
+        for (int j = 0; j < k; j++) {
+            printf("%lf ", mid2[i][j]);
+        }
+        printf("\n");
+    	}
 
 	MatrixMultiply(mid2, S2, 2, 2, k, c1);
     	//while (count < 400)
