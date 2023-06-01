@@ -21,6 +21,11 @@ double PAS_a[500], PAS_n[500];
 double PAS_amax, PAS_nmax;
 double PAS_amin, PAS_nmin;
 double dot, eucl;
+double consmatrx_Paa[200][200], consmatrx_Pra[200][200];
+double consmatrx_Pcaa[200][200], consmatrx_Pcra[200][200];
+
+double consmatrx_Pan[200][200], consmatrx_Prn[200][200];
+double consmatrx_Pcan[200][200], consmatrx_Pcrn[200][200];
 
 /*Declaration for input of Current*/
 double Mca[200][200], Mcn[200][200];
@@ -72,9 +77,8 @@ void MatrixMultiply(double a[][200], double b[][200], int row1, int col1, int co
 // Dot product of two vector
 double DotProduct(double a[][200], double b[][200], int k)
 {
-	int i;
 	double c = 0;
-	for (i = 0; i < k; i++)
+	for (int i = 0; i < k; i++)
 	{
 		c += a[i][0] * b[i][0];
 	}
@@ -195,7 +199,7 @@ void InvertMatrix(double num[200][200], double f, double inverse[][200])
     {
       double a[25][25], index, d;
       int i, j;
-      index = k;
+      index = 2;
       for (i = 0;i < index; i++)
         {
          for (j = 0;j < index; j++)
@@ -357,7 +361,7 @@ int main(void)
 	start = clock();	// Lấy thời gian trước khi thực hiện thuật toán
 
 	FILE *file1;
-	file1 = fopen("data_test_2.txt", "r");
+	file1 = fopen("data_test.txt", "r");
 
 	if (file1 == NULL)
 	{
@@ -450,7 +454,7 @@ int main(void)
 			{
 				S1[i][j] = sin(w * (j + 1) * Ts);
 			}
-			S2[j][i] = S1[i][j];
+			S2[j][i] = S1[i][j]; // S1 = S , S2 = S^T
 		}
     }
     //fixed --> Wrong in the dimension of matrix S1 and S2
@@ -473,11 +477,11 @@ int main(void)
 
     // Compute C1=(S2*S1)^-1*S2
 
-	MatrixMultiply(S2, S1, k, 2, k, mid1);
+	MatrixMultiply(S1, S2, 2, k, 2, mid1);
 
     	printf("Matrix mid1:\n");
-        for (int i = 0; i < k; i++) {
-        for (int j = 0; j < k; j++) {
+        for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
             printf("%lf ", mid1[i][j]);
         }
         printf("\n");
@@ -487,14 +491,22 @@ int main(void)
 	//InvertMatrix(mid1, k, mid2);
 
 	printf("Matrix mid2:\n");
-        for (int i = 0; i < k; i++) {
-        for (int j = 0; j < k; j++) {
+        for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
             printf("%lf ", mid2[i][j]);
         }
         printf("\n");
     	}
 
-	MatrixMultiply(mid2, S2, 2, 2, k, c1);
+	MatrixMultiply(mid2, S1, 2, 2, k, c1);
+
+	printf("Matrix c1:\n");
+        for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < k; j++) {
+            printf("%lf ", c1[i][j]);
+        }
+        printf("\n");
+    	}
     	//while (count < 400)
 	while (count < 200)
 	{
@@ -541,43 +553,68 @@ int main(void)
 				Ncn[i][0] = cur_n[i + alpha];
 			}
 
+
+				printf("Matrix Ma:\n");
+        		for (int i = 0; i < k; i++) {
+           		printf("%lf ", Ma[i][0]);
+        		printf("\n");
+				}
+
 			// Matrix caculation
 
-			MatrixMultiply(c1, Ma, 2, k, 1, Y_paa);
-			MatrixMultiply(c1, Mn, 2, k, 1, Y_pan);
+			MatrixMultiply(S2, c1, k, 2, k, consmatrx_Paa);
+			MatrixMultiply(S2, c1, k, 2, k, consmatrx_Pra);
 
-			MatrixMultiply(c1, Mca, 2, k, 1, Yc_paa);
-			MatrixMultiply(c1, Mcn, 2, k, 1, Yc_pan);
+			MatrixMultiply(S2, c1, k, 2, k, consmatrx_Pcaa);
+			MatrixMultiply(S2, c1, k, 2, k, consmatrx_Pcra);
+
+
+			//MatrixMultiply(c1, Ma, 2, k, 1, Y_paa);
+			//MatrixMultiply(c1, Mn, 2, k, 1, Y_pan);
+
+			//MatrixMultiply(c1, Mca, 2, k, 1, Yc_paa);
+			//MatrixMultiply(c1, Mcn, 2, k, 1, Yc_pan);
 
 			// Matrix caculation
 
+			MatrixMultiply(S2, c1, k, 2, k, consmatrx_Pan);
+			MatrixMultiply(S2, c1, k, 2, k, consmatrx_Prn);
+
+			MatrixMultiply(S2, c1, k, 2, k, consmatrx_Pcan);
+			MatrixMultiply(S2, c1, k, 2, k, consmatrx_Pcrn);
+			/*
 			MatrixMultiply(c1, Na, 2, k, 1, Y_pra);
 			MatrixMultiply(c1, Nn, 2, k, 1, Y_prn);
 
 			MatrixMultiply(c1, Nca, 2, k, 1, Yc_pra);
 			MatrixMultiply(c1, Ncn, 2, k, 1, Yc_prn);
-
+			*/
 			// Matrix caculation
 
-			MatrixMultiply(S1, Y_paa, k, 2, 1, V_paa);
+			MatrixMultiply(consmatrx_Paa, Ma, k, k, 1, V_paa);
 
-			MatrixMultiply(S1, Y_pan, k, 2, 1, V_pan);
+			MatrixMultiply(consmatrx_Pan, Mn, k, k, 1, V_pan);
 
-			MatrixMultiply(S1, Y_pra, k, 2, 1, V_pra);
+			MatrixMultiply(consmatrx_Pra, Na, k, k, 1, V_pra);
 
-			MatrixMultiply(S1, Y_prn, k, 2, 1, V_prn);
+			MatrixMultiply(consmatrx_Prn, Nn, k, k, 1, V_prn);
 
-			MatrixMultiply(S1, Yc_paa, k, 2, 1, Vc_paa);
+			MatrixMultiply(consmatrx_Pcaa, Mca, k, k, 1, Vc_paa);
 
-			MatrixMultiply(S1, Yc_pan, k, 2, 1, Vc_pan);
+			MatrixMultiply(consmatrx_Pcan, Mcn, k, k, 1, Vc_pan);
 
-			MatrixMultiply(S1, Yc_pra, k, 2, 1, Vc_pra);
+			MatrixMultiply(consmatrx_Pcra, Nca, k, k, 1, Vc_pra);
 
-			MatrixMultiply(S1, Yc_prn, k, 2, 1, Vc_prn);
+			MatrixMultiply(consmatrx_Pcrn, Ncn, k, k, 1, Vc_prn);
 
 			/*Find the phase difference between the two vector in radian
 				Phi=arcos((V_pr.V_pa)/(abs(V_pr)*abs(V_pa))
 			*/
+
+
+			
+
+
 			dot = DotProduct(V_pra, V_paa, k);
 
 			eucl = Euclidian(V_pra, V_paa, k);
